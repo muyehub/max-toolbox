@@ -16,6 +16,12 @@ const router = createRouter({
       path: "/tool",
       name: "工具",
       component: () => import('@/components/Tool/index.vue'),
+      children: [
+        {
+          path: "base64",
+          component: import('@/components/Tool/sub/base64.vue')
+        },
+      ]
     },
     {
       path: "/news",
